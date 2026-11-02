@@ -1,0 +1,69 @@
+@keyframes content-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.brand-icon {
+  animation: brand-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes brand-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(29, 185, 84, 0); }
+  50%      { transform: scale(1.06); box-shadow: 0 0 22px rgba(29, 185, 84, 0.5); }
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer .heart {
+  color: var(--danger);
+  display: inline-block;
+  animation: heart-beat 1.4s ease-in-out infinite;
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  30%      { transform: scale(1.25); }
+  60%      { transform: scale(1.05); }
+}
+
+.footer-link {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.footer-link.github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.footer-link.github:hover {
+  color: var(--text);
+  border-bottom-color: var(--text-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-inner, .splash-ring, .splash-arc, .splash-orbit, .splash-vinyl,
+  .splash-label, .vinyl-label, .splash-note, .splash-aurora,
+  .splash-dust i, .splash-word span, .splash-word-sheen, .splash-eq i,
+  .splash-bar::after, .splash-status::after,
+  .brand-icon, .footer .heart,
+  .login-card, .auth-badge, .auth-field,
+  body.ready .topbar, body.ready .container, body.ready .footer {
+    animation: none !important;
+  }
+  .splash-word span { opacity: 1; }
+  .splash-dust { display: none; }
+}

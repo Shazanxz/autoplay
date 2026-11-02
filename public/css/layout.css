@@ -1,0 +1,43 @@
+.topbar {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 56px 24px 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--accent-grad);
+  color: #000000;
+  font-size: 20px;
+}
+
+.brand-tagline {
+  margin: 10px 0 0;
+  color: var(--text-dim);
+  font-size: 15px;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 8px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

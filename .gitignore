@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.log
+
+data/
+streams/*.mp3
+tmp_uploads/

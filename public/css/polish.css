@@ -1,0 +1,61 @@
+/* ========== UPGRADE: ícones SVG e componentes ========== */
+.icon { width: 1.1em; height: 1.1em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.15em; }
+.h-icon { color: var(--accent-2); margin-right: 8px; vertical-align: -0.14em; }
+
+button:focus-visible, a:focus-visible, .dropzone:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+button { -webkit-tap-highlight-color: transparent; }
+
+.profile-exit, .ghost-btn, .secondary-btn, .pl-btn, .result-url-row button, .confirm-actions button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+.generate-btn { gap: 10px; }
+.brand-icon .icon, .splash-note, .auth-badge-note { font-size: 22px; }
+.heart { color: var(--danger); font-size: 14px; vertical-align: -0.2em; }
+
+.card { transition: border-color 0.2s ease; }
+.card:hover { border-color: var(--border-soft); }
+.tab-panel:not([hidden]) { animation: slide-in 0.25s ease; }
+.tab { transition: background 0.15s, color 0.15s; }
+.ghost-btn:hover, .secondary-btn:hover { color: var(--text); border-color: var(--accent); }
+
+.dropzone-icon { transition: transform 0.2s ease, background 0.2s ease; font-size: 22px; }
+.dropzone:hover .dropzone-icon, .dropzone.dragover .dropzone-icon { transform: translateY(-3px); background: var(--accent-soft); }
+.dropzone.dragover { box-shadow: 0 0 0 4px var(--accent-soft); }
+.dz-formats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.dz-formats i { font-style: normal; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; color: var(--accent-2); background: var(--accent-soft); padding: 2px 8px; border-radius: 999px; }
+
+.domain-icon { color: var(--accent-2); font-size: 18px; margin-left: 14px; }
+
+.track-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--accent-soft); color: var(--accent-2); font-size: 16px; flex: none; }
+.track-actions { display: inline-flex; align-items: center; gap: 2px; flex: none; }
+.track-btn { display: grid; place-items: center; background: none; border: none; color: var(--text-dim); padding: 7px; border-radius: 8px; cursor: pointer; font-size: 16px; transition: color 0.15s, background 0.15s; }
+.track-btn:hover:not(:disabled) { color: var(--accent-2); background: var(--accent-soft); }
+.track-btn.remove:hover { color: var(--danger); background: rgba(255, 92, 122, 0.12); }
+.track-btn:disabled { opacity: 0.3; cursor: default; }
+
+.playlist-item { transition: border-color 0.2s ease, transform 0.2s ease; }
+.playlist-item:hover { border-color: var(--border-soft); transform: translateY(-1px); }
+.playlist-top { display: flex; align-items: center; gap: 12px; }
+.playlist-meta { flex: 1; min-width: 0; }
+.pl-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-2); font-size: 22px; flex: none; }
+.playlist-sub { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.pl-chip { display: inline-flex; align-items: center; gap: 5px; }
+.pl-chip .icon { font-size: 13px; color: var(--accent); }
+.playlist-url { display: flex; align-items: center; gap: 8px; }
+.playlist-url span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.playlist-url .icon { color: var(--accent); }
+.pl-btn:hover { border-color: var(--accent); }
+.ic-done { display: none; }
+.copied .ic-done { display: inline-block; }
+.copied .ic-copy { display: none; }
+
+.empty-state { display: grid; justify-items: center; gap: 6px; text-align: center; padding: 26px 10px; color: var(--text-dim); }
+.empty-state .icon { width: 46px; height: 46px; color: var(--accent); stroke-width: 1.5; margin-bottom: 6px; }
+.empty-state p { margin: 0; }
+.empty-state strong { color: var(--text); }
+
+@media (max-width: 480px) {
+  .track-item { gap: 8px; padding: 8px; }
+  .track-icon { display: none; }
+  .pl-btn { flex: 1; padding: 9px 8px; }
+  .playlist-actions { display: flex; gap: 6px; }
+  .profile-exit span { display: none; }
+}

@@ -1,0 +1,19 @@
+.toasts { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); display: grid; gap: 8px; width: min(92vw, 380px); z-index: 80; pointer-events: none; }
+.toast { display: flex; align-items: center; gap: 10px; background: var(--surface-2); border: 1px solid var(--border-soft); color: var(--text); padding: 12px 14px; border-radius: 12px; font-size: 13.5px; font-weight: 600; box-shadow: var(--shadow); animation: toast-in 0.25s ease; transition: opacity 0.25s, transform 0.25s; }
+.toast .icon { font-size: 18px; color: var(--accent-2); }
+.toast.error { border-color: rgba(255, 92, 122, 0.4); }
+.toast.error .icon { color: var(--danger); }
+.toast.out { opacity: 0; transform: translateY(8px); }
+@keyframes toast-in { from { opacity: 0; transform: translateY(12px); } }
+
+.confirm { border: 1px solid var(--border-soft); background: var(--surface); color: var(--text); border-radius: var(--radius); padding: 24px; width: min(92vw, 380px); box-shadow: var(--shadow); text-align: center; }
+.confirm::backdrop { background: rgba(0, 0, 0, 0.72); backdrop-filter: blur(3px); }
+.confirm[open] { animation: slide-in 0.2s ease; }
+.confirm form { margin: 0; }
+.confirm-icon { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: rgba(255, 92, 122, 0.14); color: var(--danger); font-size: 24px; }
+.confirm h3 { margin: 14px 0 6px; font-size: 17px; }
+.confirm p { margin: 0; color: var(--text-dim); font-size: 13.5px; line-height: 1.55; word-break: break-word; }
+.confirm-actions { display: flex; gap: 10px; margin-top: 20px; }
+.confirm-actions button { flex: 1; margin: 0; padding: 12px; border-radius: var(--radius-sm); font-size: 13.5px; font-weight: 700; cursor: pointer; }
+.danger-btn { border: none; background: var(--danger); color: #000000; }
+.danger-btn:hover { filter: brightness(1.1); }
